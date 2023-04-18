@@ -1,5 +1,6 @@
 .container {
-  max-width: 800px;
+  max-width: 500px;
+  min-height: 500px;
   margin: 20px auto;
   padding: 20px;
   background-color: white;
@@ -20,6 +21,7 @@ button.addButton {
   border: 1px solid #00f351;
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 button.addButton:hover {
