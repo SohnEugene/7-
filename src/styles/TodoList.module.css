@@ -32,10 +32,14 @@ button.addButton:hover {
 .todoItem {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .todoText {
   margin-left: 10px;
   flex-grow: 1;
+}
+
+.dateText {
+  float: right;
 }

@@ -35,6 +35,8 @@ const TodoList = () => {
     results.docs.forEach((doc) => {
       newTodos.push({id:doc.id, ...doc.data()});
     });
+
+    newTodos.sort((a, b) => a.timeStamp - b.timeStamp);
     setTodos(newTodos);
   };
 
@@ -53,12 +55,19 @@ const TodoList = () => {
     //   completed: 완료 여부,
     // }
     // ...todos => {id: 1, text: "할일1", completed: false}, {id: 2, text: "할일2", completed: false}}, ..
+
+    const date = new Date();
+    const timeStamp = Date.now();
+    const dateString = date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes().toString().padStart(2, '0');;
+
     const docRef = await addDoc(todoCollection, {
       text: input,
       completed: false,
+      dateTemp: dateString,
+      timeStamp: timeStamp
     });
     
-    setTodos([...todos, { id: Date.now(), text: input, completed: false }]);
+    setTodos([...todos, { id: timeStamp, text: input, completed: false, dateTemp: dateString, timeStamp: timeStamp}]);
     setInput("");
   };
 
