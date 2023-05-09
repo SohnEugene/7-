@@ -8,7 +8,7 @@ export default function Home() {
   const { data } = useSession({
     required: true,
     onUnauthenticated() {
-      router.replace("/auth/signin");
+      router.replace("api//auth/signin");
     },
   });
 
