@@ -132,17 +132,6 @@ const TodoList = () => {
   // 컴포넌트를 렌더링합니다.
   return (
     <div className={styles.container}>
-      <button
-            className={`w-40
-                      justify-self-center
-                      p-1 mb-4
-                    text-rose-500
-                      border border-rose-500 rounded
-                    hover:bg-white hover:text-rose-500`}
-            onClick={() => signOut()}
-          >
-            Sign out
-          </button>
       <h1 className="text-xl mb-4 font-bold underline underline-offset-4 decoration-wavy">
         {data?.user?.name}'s Todo List
       </h1>

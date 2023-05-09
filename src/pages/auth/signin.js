@@ -14,7 +14,7 @@ export default function Signin() {
             className={`w-40
                       justify-self-center
                       p-1 mb-4
-                    bg-blue-500 text-white
+                    bg-rose-500 text-white
                       border border-rose-500 rounded
                     hover:bg-white hover:text-rose-500`}
             onClick={() => router.push("/")}
