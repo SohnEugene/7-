@@ -1,8 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
-
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
