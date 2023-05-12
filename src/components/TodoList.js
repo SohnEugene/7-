@@ -132,20 +132,22 @@ const TodoList = () => {
   // 컴포넌트를 렌더링합니다.
   return (
     <div className={styles.container}>
+      <div className = "text-center">
       <button
             className={`w-30
-                      justify-self-center
                       p-1 mb-4
                     text-rose-500
                     border border-rose-500 rounded
-                    hover:bg-white hover:text-rose-500 float-right mr-10`}
+                    hover:bg-white hover:text-rose-500 float-right mr-0`}
             onClick={() => signOut()}
           >
             Sign out
-      </button>
-      <h1 className="text-xl mb-4 font-bold underline underline-offset-4 decoration-wavy">
-        {data?.user?.name}'s Todo List
-      </h1>
+        </button>
+        <h1 className="text-xl mb-4 font-bold underline underline-offset-4 decoration-wavy block">
+          {data?.user?.name}'s Todo List
+        </h1>
+        </div>
+      
       {/* 할 일을 입력받는 텍스트 필드입니다. */}
       <input
         type="text"
@@ -178,7 +180,7 @@ const TodoList = () => {
           //   background-color: #fff;
           //   color: #0070f3;
           // }
-          className={`w-40
+          className={`w-35
                       justify-self-end
                       p-1 mb-4
                     bg-rose-500 text-white

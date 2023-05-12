@@ -2,7 +2,7 @@
   max-width: 500px;
   min-height: 500px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 40px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -41,5 +41,5 @@ button.addButton:hover {
 }
 
 .dateText {
-  float: right;
+  margin-right: 10px;
 }
